@@ -1,0 +1,18 @@
+## .NET Core / ASP.NET Core
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+appsettings.Production.json
+appsettings.local.json
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Archivos de planeación y notas privadas (no se suben a Git)
+PLAN_DETALLADO.md
+
