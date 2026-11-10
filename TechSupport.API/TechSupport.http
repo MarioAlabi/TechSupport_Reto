@@ -1,0 +1,33 @@
+@TechSupport.API_HostAddress = http://localhost:5059
+
+### 1. Consultar incidentes (inicialmente vacío)
+GET {{TechSupport.API_HostAddress}}/api/incidentes
+Accept: application/json
+
+### 2. Crear primer incidente
+POST {{TechSupport.API_HostAddress}}/api/incidentes
+Content-Type: application/json
+
+{
+  "titulo": "Caída del servidor de base de datos",
+  "descripcion": "El servicio de base de datos no acepta conexiones desde el frontend.",
+  "prioridad": "Critica"
+}
+
+### 3. Crear segundo incidente
+POST {{TechSupport.API_HostAddress}}/api/incidentes
+Content-Type: application/json
+
+{
+  "titulo": "Fallo en impresora de contabilidad",
+  "descripcion": "La impresora en el piso 2 no imprime documentos en red.",
+  "prioridad": "Media"
+}
+
+### 4. Consultar listado de incidentes creados
+GET {{TechSupport.API_HostAddress}}/api/incidentes
+Accept: application/json
+
+### 5. Consultar detalle del incidente por ID
+GET {{TechSupport.API_HostAddress}}/api/incidentes/1
+Accept: application/json
